@@ -1,3 +1,5 @@
+#Escreva um programa que leia uma lista de números inteiros e crie uma lista encadeada simples com esses números em ordem inversa.
+
 class Item:
     def __init__(self, valor):
         self.valor = valor
@@ -29,13 +31,13 @@ class ListaEncadeada:
 
 def criar_lista_inversa(numeros):
     lista = ListaEncadeada()
-    for numero in (numeros):
+    for numero in numeros:
         lista.inserir_inicio(numero)
     return lista
 
 numeros = input("Digite os números inteiros separados por espaço: ").split()
 numeros = [int(numero) for numero in numeros]
-numeros.reverse()
+
 lista_inversa = criar_lista_inversa(numeros)
 
 print("Lista encadeada inversa:")
