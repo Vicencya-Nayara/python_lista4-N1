@@ -1,7 +1,6 @@
 #Implemente uma lista encadeada simples e as operações básicas: inserir no início, 
 #inserir no final, remover do início, remover do final e exibir a lista.
 
-
 class Item:
     def __init__(self, valor):
         self.valor = valor
@@ -65,16 +64,22 @@ class ListaEncadeada:
             print()
 
 
+num_elementos = int(input('Digite a quantidade de elementos que você quer inserir: '))
 lista = ListaEncadeada()
 
-lista.inserir_inicio(10)
-lista.inserir_inicio(20)
-lista.inserir_fim(30)
-lista.inserir_fim(40)
+for i in range(num_elementos):
+    valor1 = input('Digite um valor para inserir no início da lista: ')
+    lista.inserir_inicio(valor1)
+    valor2 = input('Digite um valor para inserir no final da lista: ')
+    lista.inserir_fim(valor2)
+    print(f'\nMostrando a lista: ', end="")
+    lista.exibir_lista()
 
-lista.exibir_lista()  
-
+print('Removendo do início.')
 lista.remover_inicio()
+
+print('Removendo do final.')
 lista.remover_fim()
 
-lista.exibir_lista()  
+print('Mostrando a Lista Final: ', end="")
+lista.exibir_lista()
